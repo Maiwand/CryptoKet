@@ -18,15 +18,18 @@
 body {
   font-family: "Poppins";
 }
+
 *::selection {
   background: var(--main);
   color: white;
 }
+
 .h3-styling {
   font-size: 20px;
   font-weight: 600;
   color: var(--black-1);
 }
+
 .p1,
 .p1-semi {
   font-size: 16px;

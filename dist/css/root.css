@@ -50,6 +50,12 @@ body {
   font-display: swap;
 }
 
+.button.outlined {
+  color: var(--main);
+  background: var(--white);
+  border: 1px solid var(--main);
+}
+
 .button {
   display: block;
   margin: 0 5px;
@@ -59,15 +65,15 @@ body {
   border-radius: 10px;
   background: var(--main-grad);
   color: var(--white);
-  transition: 0.2s;
+  transition: all 0.2s;
   line-height: 16px;
 }
-.button.outlined {
-  color: var(--main);
-  background: var(--white);
-  border: 1px solid var(--main);
-}
-
 .button:hover {
+  box-shadow: 0 4px 18px #d23ca54a;
+}
+.button.main-hover:hover {
+  background: var(--main-grad);
+  color: var(--white);
+  transition: all 0.2s;
   box-shadow: 0 4px 18px #d23ca54a;
 }

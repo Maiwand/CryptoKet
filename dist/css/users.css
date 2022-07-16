@@ -1,0 +1,73 @@
+@import url(main.css);
+
+.profile-page-img div div {
+  padding: 6px;
+  background: var(--white);
+  border-radius: 9999px;
+}
+.profile-page-img h1 {
+  font-weight: 600;
+  color: var(--black-2);
+  text-align: center;
+  line-height: 42px;
+  margin-top: 10px;
+}
+
+.hot-bids .card-content .card-item {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 12px;
+  padding-bottom: 20px;
+  transition: 0.1s;
+}
+.hot-bids .card-content .card-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+.hot-bids .card-content .card-item img {
+  border-radius: 8px;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .hot-bids .card-content .card-item img {
+    height: auto;
+  }
+}
+
+.hot-bids .card-content .card-item p.title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  margin-top: 15px;
+}
+.hot-bids .card-content .card-item p.price {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+  float: left;
+}
+.hot-bids .card-content .card-item p.price span {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.hot-bids .card-content .card-item p.likes {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  float: right;
+  position: relative;
+}
+
+.hot-bids .card-content .card-item p.likes span.like::after {
+  content: "";
+  background: url(../img/uti/line.svg) no-repeat 0 / 14px;
+  width: 14px;
+  height: 12px;
+  position: absolute;
+  left: -16px;
+}
+.hot-bids .card-content .card-item p.likes span.liked::after {
+  background-image: url(../img/uti/fill.svg);
+}

@@ -1,0 +1,166 @@
+@import url(main.css);
+
+/* Main */
+.banner {
+  background: var(--main-grad);
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::after,
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  top: -160px;
+  left: -170px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+}
+@media (max-width: 640px) {
+  .banner::after,
+  .banner::before {
+    width: 50vw;
+    height: 50vw;
+    bottom: 20%;
+    left: -30%;
+    top: auto;
+  }
+}
+.banner::before {
+  top: initial;
+  left: initial;
+  right: -40px;
+  bottom: -130px;
+}
+@media (max-width: 640px) {
+  .banner::before {
+    top: initial;
+    left: initial;
+    right: -40px;
+    top: 25%;
+  }
+}
+.banner h1 {
+  font-family: "Gotham";
+  font-weight: bold;
+  color: var(--white);
+  line-height: 110%;
+}
+
+.top-seller .card-content .card-item {
+  border-radius: 20px;
+  border: 1px solid var(--grey-1);
+  padding: 20px;
+  transition: 0.1s;
+}
+.top-seller .card-content .card-item:hover {
+  box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+}
+.top-seller .card-content .card-item span.number p {
+  color: var(--white);
+  margin-top: 0;
+}
+.top-seller .card-content .card-item span.number {
+  background: var(--main);
+  display: grid;
+  height: 33px;
+  width: 33px;
+  align-items: center;
+  border-radius: 50px;
+  margin: -10px 2px 2px -10px;
+}
+.top-seller .card-content .card-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  margin: 0 auto;
+}
+
+.top-seller .card-content .card-item p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.top-seller .card-content .card-item p span {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.top-seller .card-content .card-item .verified-user-img::after {
+  content: "";
+  background-image: url(../img/uti/check.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-size: 20px;
+  bottom: 0;
+  right: calc(50% - 40px);
+}
+
+.hot-bids .card-content .card-item {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 12px;
+  padding-bottom: 20px;
+  transition: 0.1s;
+}
+.hot-bids .card-content .card-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+.hot-bids .card-content .card-item img {
+  border-radius: 8px;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .hot-bids .card-content .card-item img {
+    height: auto;
+  }
+}
+
+.hot-bids .card-content .card-item p.title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  margin-top: 15px;
+}
+.hot-bids .card-content .card-item p.price {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+  float: left;
+}
+.hot-bids .card-content .card-item p.price span {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.hot-bids .card-content .card-item p.likes {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  float: right;
+  position: relative;
+}
+
+.hot-bids .card-content .card-item p.likes span.like::after {
+  content: "";
+  background: url(../img/uti/line.svg) no-repeat 0 / 14px;
+  width: 14px;
+  height: 12px;
+  position: absolute;
+  left: -16px;
+}
+.hot-bids .card-content .card-item p.likes span.liked::after {
+  background-image: url(../img/uti/fill.svg);
+}

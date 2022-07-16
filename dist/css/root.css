@@ -1,0 +1,70 @@
+:root {
+  --main-grad: linear-gradient(
+    127deg,
+    rgba(235, 20, 132, 1) 40%,
+    rgba(200, 28, 197, 1) 100%
+  );
+  --main: #da18a3;
+  --dark: #24252d;
+  --white: #fff;
+  --grey-1: #e3e1e3;
+  --grey-2: #888888;
+  --grey-3: #4f4f4f;
+  --black-1: #2d2e36;
+  --black-2: #1b1a21;
+  --black-3: #2a2d3a;
+  --black-4: #24252d;
+}
+body {
+  font-family: "Poppins";
+}
+*::selection {
+  background: var(--main);
+  color: white;
+}
+.h3-styling {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black-1);
+}
+.p1,
+.p1-semi {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-1);
+}
+
+.p1-semi {
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Bold.woff2") format("woff2"),
+    url("../fonts/Gotham-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.button {
+  display: block;
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 10px;
+  background: var(--main-grad);
+  color: var(--white);
+  transition: 0.2s;
+  line-height: 16px;
+}
+.button.outlined {
+  color: var(--main);
+  background: var(--white);
+  border: 1px solid var(--main);
+}
+
+.button:hover {
+  box-shadow: 0 4px 18px #d23ca54a;
+}
